@@ -5,9 +5,9 @@ public class factorial {
         Scanner s = new Scanner(System.in);
     
         System.out.print("Enter the number: ");
-        int n = s.nextInt();
+        double n = s.nextInt();
 
-        int num = 1;
+        double num = 1;
 
         if (n == 0) {
             System.out.print("The factorial of 0 = 0");
