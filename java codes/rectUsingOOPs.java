@@ -5,14 +5,17 @@ public class rectUsingOOPs {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter the no. of students: ");
         int n = s.nextInt();
-        for (int i = 1; i <= n; i++) {
+        Student[] h = new Student[n];
+        for (int i = 0; i < n; i++) {
             System.out.print("Enter the id: ");
             int id = s.nextInt();
             System.out.print("Enter the name: ");
             String name = s.next();
-            Student h = new Student();
-            h.insert(id, name);
-            h.display();
+            h[i] = new Student();
+            h[i].insert(id, name);
+        }
+        for (int i = 0; i < n; i++) {
+            h[i].display();
         }
         s.close();
     }
