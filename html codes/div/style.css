@@ -1,0 +1,21 @@
+.topRight{
+    width: 70rem;
+    height: 30rem;
+    float: right;
+    border: 3px solid #000;
+    background-color: rgba(255, 255, 255, 0.155);
+}
+.left{
+    width: 20rem;
+    height: 45rem;
+    float: left;
+    border: 3px solid #000;
+    background-color: rgba(255, 255, 255, 0.155);
+    border-radius: 10rem;
+}
+body{
+    background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-abstract-background-black-background-3440x1440-8710.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

@@ -30,43 +30,43 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
         timer.start();
     }
     public void paint(Graphics g) {
-        g.setColor(Color.BLACK);
+        g.setColor(Color.black);
         g.fillRect(1, 1, 692, 592);
         map.draw((Graphics2D) g);
-        g.setColor(Color.YELLOW);
+        g.setColor(Color.yellow);
         g.fillRect(0, 0, 3, 592);
         g.fillRect(0, 0, 692, 3);
         g.fillRect(691, 0, 3, 592);
 
-        g.setColor(Color.WHITE);
+        g.setColor(Color.white);
         g.setFont(new Font("serif", Font.BOLD,25));
         g.drawString(""+score, 590, 30);
 
-        g.setColor(Color.YELLOW);
+        g.setColor(Color.green);
         g.fillRect(playerX, 550, 100, 0);
 
-        g.setColor(Color.RED);
+        g.setColor(Color.yellow);
         g.fillRect(ballPosX, ballPosY, 20, 20);
 
         if (ballPosY > 570) {
             play = false;
             ballXDir = 0;
             ballYDir = 0;
-            g.setColor(Color.RED);
+            g.setColor(Color.red);
             g.setFont(new Font("serif", Font.BOLD,30));
             g.drawString("Game over, Score: "+score, 190, 300);
             g.setFont(new Font("serif", Font.BOLD,30));
-            g.drawString("Press enter to restart ", 190, 340);
+            g.drawString("Press enter to restart ", 230, 350);
         }
         if (totalBricks == 0) {
             play = false;
             ballXDir = -1;
             ballYDir = -2;
-            g.setColor(Color.RED);
+            g.setColor(Color.red);
             g.setFont(new Font("serif", Font.BOLD,30));
             g.drawString("You won, Score: "+score, 190, 300);
             g.setFont(new Font("serif", Font.BOLD,30));
-            g.drawString("Press enter to restart ", 190, 340);
+            g.drawString("Press enter to restart ", 230, 350);
         }
         g.dispose();
 
@@ -158,10 +158,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener{
         playerX -= 20;
     }
     @Override
-    public void keyTyped(KeyEvent e) {
-    }
+    public void keyTyped(KeyEvent e) {}
     @Override
-    public void keyReleased(KeyEvent e) {
-    }
+    public void keyReleased(KeyEvent e) {}
 }
 
